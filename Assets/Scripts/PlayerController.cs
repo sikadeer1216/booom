@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float min_Speed = 5;
-    public float max_Speed = 10;
+    public float max_Speed = 7;
     public float speed;
 
     public float downTime = 0;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
         if( h!= 0 )
         {
-            Vector3 dir = new Vector3(h, 0, 0);
+            Vector3 dir = new Vector3(0, h, 0);
             Quaternion targetQ = Quaternion.LookRotation(dir, Vector3.up);
             transform.rotation = targetQ;
             downTime += Time.deltaTime;
