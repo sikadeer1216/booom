@@ -5,17 +5,14 @@ using UnityEngine;
 
 //状态对象基类
 
-public abstract class StateBase
+public abstract class StateBase<T>
 {
     //当前状态对象代表的枚举状态
-    public Enum StateType;
+    public T StateType;
 
-    //当前控制的角色
-    public FSMController Controller;
     //首次实例化的初始化
-    public virtual void Init(FSMController Controller , Enum stateType)
+    public virtual void Init(FSMController<T> Controller , T stateType)
     {
-        this.Controller = Controller;
         this.StateType = stateType;
     }
 

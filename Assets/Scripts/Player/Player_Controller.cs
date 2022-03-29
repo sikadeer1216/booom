@@ -5,11 +5,11 @@ using UnityEngine;
 
 public enum PlayerState
 {
+    Player_None,//默认
     Player_Move,
 }
-public class Player_Controller : FSMController
+public class Player_Controller : FSMController<PlayerState>
 {
-    public override Enum CurrentState { get => playerState; set => playerState = (PlayerState)value; }
     private PlayerState playerState;
     public Player_Input input { get; private set; }
     public new Player_Audio audio { get; private set; }
@@ -24,6 +24,6 @@ public class Player_Controller : FSMController
         model.Init(this);
         characterController = GetComponent<CharacterController>();
 
-        ChangeState(PlayerState.Player_Move);
+        ChangeState<Player_Move>(PlayerState.Player_Move);
     }
 }
