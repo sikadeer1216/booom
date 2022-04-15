@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed87a68340833c3428357fd8fd352a0f, type: 3}
   m_Name: Level 0
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0}
-  levelString: 'dddddddd
+  levelString: 'gggggggg
 
-    dppppppd
+    gppppppg
 
-    dppppppd
+    gppppppg
 
-    dggggggd'
+    gggggggg'
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}

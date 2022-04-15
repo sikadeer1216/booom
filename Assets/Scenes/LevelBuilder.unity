@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charBlockPairs:
   - character: 103
-    blockPrefab: {fileID: 6072614308121784725, guid: 5cba1d676ea2b0e4c907261b174309e8,
+    blockPrefab: {fileID: 6819377905767354088, guid: bf5796872397a3044b9255edeade9976,
       type: 3}
   - character: 100
     blockPrefab: {fileID: 6819377905767354088, guid: bf5796872397a3044b9255edeade9976,
