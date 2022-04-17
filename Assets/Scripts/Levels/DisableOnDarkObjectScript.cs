@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnableOnLightObjectScript : ReactNearSphereObjectScript
+public class DisableOnDarkObjectScript : ReactNearSphereObjectScript
 {
     // Start is called before the first frame update
     void Start()
@@ -14,8 +14,8 @@ public class EnableOnLightObjectScript : ReactNearSphereObjectScript
     void Update()
     {
         GuideManager guideManager = GuideManager.GetInstance();
-        bool isInGuideRange = IsInGuideRange(true);
-        objectCollider.enabled = isInGuideRange;
-        model.SetActive(isInGuideRange);
+        bool isInGuideRange = IsInGuideRange(false);
+        objectCollider.enabled = !isInGuideRange;
+        model.SetActive(!isInGuideRange);
     }
 }

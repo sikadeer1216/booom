@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     private LevelManager instance;
     public LevelGenerator levelGenerator;
     public LevelData startingLevel;
-    public Vector3Int levelDimensions;
+    public Vector2Int levelDimensions;
     public LevelManager GetInstance() {
         return instance;
     }

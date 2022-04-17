@@ -39,7 +39,7 @@ public class LevelGenerator : MonoBehaviour
         string[] rows = level.Split('\n');
         for (int y = 0; y < rows.Length; y++) {
             string row = rows[y];
-            for (int x = 0; x < rows[0].Length; x++) {
+            for (int x = 0; x < row.Length; x++) {
                 Vector3Int pos = new Vector3Int(origin.x + x, origin.y - y, origin.z);
                 char character = row[x];
                 charBlockMap.TryGetValue(character, out GameObject objectPrefab);
