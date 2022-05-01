@@ -6,6 +6,7 @@ public class SphereScript : MonoBehaviour
 {
     public Light lightSource;
     public MeshRenderer meshRenderer;
+    public SphereCollider sphereCollider;
     public Material lightMaterial;
     public Material darkMaterial;
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class SphereScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (GuideManager.GetInstance().guideState == GuideState.SPHERE && Input.GetMouseButtonDown(0)) {
             lightSource.enabled ^= true;
             meshRenderer.material = lightSource.enabled ? lightMaterial : darkMaterial;
         }

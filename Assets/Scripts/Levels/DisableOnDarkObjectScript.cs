@@ -15,7 +15,7 @@ public class DisableOnDarkObjectScript : ReactNearSphereObjectScript
     {
         GuideManager guideManager = GuideManager.GetInstance();
         bool isInGuideRange = IsInGuideRange(false);
-        objectCollider.enabled = !isInGuideRange;
+        objectCollider.isTrigger = isInGuideRange;
         model.SetActive(!isInGuideRange);
     }
 }

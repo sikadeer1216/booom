@@ -15,7 +15,7 @@ public class EnableOnLightObjectScript : ReactNearSphereObjectScript
     {
         GuideManager guideManager = GuideManager.GetInstance();
         bool isInGuideRange = IsInGuideRange(true);
-        objectCollider.enabled = isInGuideRange;
+        objectCollider.isTrigger = !isInGuideRange;
         model.SetActive(isInGuideRange);
     }
 }

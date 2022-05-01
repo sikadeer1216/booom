@@ -7,8 +7,8 @@ public class ReactNearSphereObjectScript : MonoBehaviour
     public Collider objectCollider;
     public GameObject model;
     protected bool IsInGuideRange(bool shouldLightBeEnabled) {
-        if (GuideManager.guideState != GuideState.SPHERE) return false;
         GuideManager guideManager = GuideManager.GetInstance();
+        if (guideManager.guideState != GuideState.SPHERE) return false;
         GuideScript guide = guideManager.guide;
         return ((guide.currentGuideRigidBody.position - transform.position).magnitude <= guideManager.lightDistance)
             && guide.sphere.lightSource.enabled == shouldLightBeEnabled;

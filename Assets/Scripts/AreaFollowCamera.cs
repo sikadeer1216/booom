@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AreaFollowCamera : MonoBehaviour
 {
+    public Vector2 cameraShiftAmount;
     // Start is called before the first frame update
     void Start()
     {
